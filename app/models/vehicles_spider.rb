@@ -1,7 +1,7 @@
 class VehicleSpider < Kimurai::Base
   @name = 'vehicles_spider'
   @engine = :mechanize
-  
+
   def self.process(url)
     @start_urls = [url]
     self.crawl!
@@ -24,3 +24,5 @@ class VehicleSpider < Kimurai::Base
     end
   end
 end
+
+puts self.process('http/www.carmax.com')
